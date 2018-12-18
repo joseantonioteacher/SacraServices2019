@@ -1,0 +1,17 @@
+/*
+ * Código fuente para fin didáctico concreto, paso intermedio 
+ * en el aprendizaje, y correspondiente a una solución 
+ * parcialmente obsoleta, incompleta o insegura.
+ *
+ * Habitualmente será una version sobre la que aprender 
+ * en base a su mejora en diseño o implementacion.
+ *
+ * Cada version se del código corresponde con un paso en 
+ * de aprendizaje en el curso/módulo al que pertenece, y ha
+ * sido creada o adaptada a partir de otras fuentes educativas
+ * o profesionales de uso libre y gratuito.
+ *
+ * No recomendado en ningún caso para sistemas en producción.
+ * 
+ * Se excluye cualquier responsabilidad.
+ */
