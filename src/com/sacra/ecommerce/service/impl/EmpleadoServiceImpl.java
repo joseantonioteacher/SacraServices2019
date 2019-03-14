@@ -27,20 +27,28 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 		
 		public Empleado findById(Long id) 
 				throws InstanceNotFoundException, DataException {
-					
+			
+			long t0 = 0, t1 = 0, t2 = 0, t3 = 0;
 			Connection connection = null;
 			
 			try {
+				t0 = System.currentTimeMillis();
 				
 				connection = ConnectionManager.getConnection();
-				connection.setAutoCommit(true);
 				
-				return dao.findById(connection, id);	
+				t1 = System.currentTimeMillis();
 				
+				connection.setAutoCommit(true);				
+				Empleado e = dao.findById(connection, id);
+				t2 = System.currentTimeMillis();
+				
+				return e;
 			} catch (SQLException e){
 				throw new DataException(e);
 			} finally {
 				JDBCUtils.closeConnection(connection);
+				t3 = System.currentTimeMillis();
+				System.out.println("Get cx: "+(t1-t0)+", DAO: "+(t2-t1)+", Release Cx: "+(t3-t2));	
 			}
 			
 		}
@@ -160,6 +168,9 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 
 	            // Execute action
 	            Empleado result = dao.create(connection, e);
+	            
+	            
+	            
 	            commit = true;
 	            
 	            return result;
