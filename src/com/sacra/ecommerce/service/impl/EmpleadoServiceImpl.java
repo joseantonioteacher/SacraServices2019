@@ -47,7 +47,7 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 				throw new DataException(e);
 			} finally {
 				JDBCUtils.closeConnection(connection);
-				t3 = System.currentTimeMillis();
+				t3 = System.nanoTime();
 				System.out.println("Get cx: "+(t1-t0)+", DAO: "+(t2-t1)+", Release Cx: "+(t3-t2));	
 			}
 			
