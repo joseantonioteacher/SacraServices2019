@@ -32,15 +32,15 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 			Connection connection = null;
 			
 			try {
-				t0 = System.currentTimeMillis();
+				t0 = System.nanoTime();
 				
 				connection = ConnectionManager.getConnection();
 				
-				t1 = System.currentTimeMillis();
+				t1 = System.nanoTime();
 				
 				connection.setAutoCommit(true);				
 				Empleado e = dao.findById(connection, id);
-				t2 = System.currentTimeMillis();
+				t2 = System.nanoTime();
 				
 				return e;
 			} catch (SQLException e){
