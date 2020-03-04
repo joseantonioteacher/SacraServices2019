@@ -3,7 +3,7 @@ package com.sacra.ecommerce.service;
 import com.sacra.ecommerce.service.impl.MailServiceImpl;
 
 public class MailServiceTest {
-	
+	 
 	//Datos
 	private String subject = "Test message from My Company E-commerce Mail Service";
 	private String message = "Hi, Yes you can!";
