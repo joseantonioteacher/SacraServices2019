@@ -10,7 +10,7 @@ import com.sacra.ecommerce.service.ClienteService;
 import com.sacra.ecommerce.service.impl.ClienteServiceImpl;
 import com.sacra.ecommerce.util.ToStringUtil;
 
-
+ 
 class ClienteServiceTest {
 	private ClienteService clienteService = null;
 	private Demografico demografico;
