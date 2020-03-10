@@ -245,14 +245,14 @@ public class CategoriaDAOImpl implements CategoriaDAO {
 			if (categoria.getDescripcion()!=null) {
 				addClause(queryString, first, " UPPER(cat.CategoryName) LIKE ? ");
 				first = false;		
-			
+			}
 			preparedStatement = connection.prepareStatement(queryString.toString(),
 					ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
 			int i = 1;       
 			
-			preparedStatement.setLong(i++, cc.getId());
-			preparedStatement.setString(i++, "%" +  cc.getNombre() + "%");
+			preparedStatement.setLong(i++, categoria.getId());
+			preparedStatement.setString(i++, "%" +  categoria.getNombre() + "%");
 
 			resultSet = preparedStatement.executeQuery();
 			
